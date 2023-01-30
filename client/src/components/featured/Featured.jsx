@@ -2,31 +2,35 @@ import useFetch from '../../hooks/useFetch'
 import './featured.css'
 
 const Featured = () => {
-    const {data, loading, error} = useFetch("")
+    const {data, loading, error} = useFetch("/hotels/countByCity?cities=hanoi,ha noi,thanhhoa")
+    
+    console.log(data);
 
     return (
         <div className="featured">
-            <div className="featuredItem">
-                <img className='featuredImg' src="https://images.unsplash.com/photo-1554357475-accb8a88a330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" alt="Place 1" />
-                <div className="featuredTitle">
-                    <h1>Ha Noi</h1>
-                    <h2>Great Place!</h2>
+            {loading ? ("Loading please wait"
+            ) : (<><div className="featuredItem">
+                    <img className='featuredImg' src="https://images.unsplash.com/photo-1554357475-accb8a88a330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" alt="Place 1" />
+                    <div className="featuredTitle">
+                        <h1>Ha Noi</h1>
+                        <h2>{data[0]} properties!</h2>
+                    </div>
                 </div>
-            </div>
-            <div className="featuredItem">
-                <img className='featuredImg' src="https://images.unsplash.com/photo-1554357475-accb8a88a330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" alt="Place 1" />
-                <div className="featuredTitle">
-                    <h1>TP.HCM</h1>
-                    <h2>VIP for you</h2>
+                <div className="featuredItem">
+                    <img className='featuredImg' src="https://images.unsplash.com/photo-1554357475-accb8a88a330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" alt="Place 1" />
+                    <div className="featuredTitle">
+                        <h1>TP.HCM</h1>
+                        <h2>{data[1]} properties!</h2>
+                    </div>
                 </div>
-            </div>
-            <div className="featuredItem">
-                <img className='featuredImg' src="https://images.unsplash.com/photo-1554357475-accb8a88a330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" alt="Place 1" />
-                <div className="featuredTitle">
-                    <h1>Thanh Hoa</h1>
-                    <h2>Nem chua so 1</h2>
-                </div>
-            </div>
+                <div className="featuredItem">
+                    <img className='featuredImg' src="https://images.unsplash.com/photo-1554357475-accb8a88a330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80" alt="Place 1" />
+                    <div className="featuredTitle">
+                        <h1>Thanh Hoa</h1>
+                        <h2>{data[2]} properties!</h2>
+                    </div>
+                </div></>)
+            }
         </div>
     )
 }
