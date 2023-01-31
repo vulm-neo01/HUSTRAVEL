@@ -15,9 +15,12 @@
 
 .fpImg{
     width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .fpName{
+    color: #333;
     font-weight: 700;
 }
 
@@ -35,6 +38,7 @@
     border: none;
     margin-right: 10px;
     font-weight: bold;
+    padding: 3px;
 }
 
 .fpRating>span{
