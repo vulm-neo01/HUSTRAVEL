@@ -1,4 +1,4 @@
-.login {
+.register {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -9,14 +9,28 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 30%;
     border: 2px rgb(32, 124, 200) solid;
-    padding: 50px;
+    padding: 20px;
     border-radius: 10px;
+}
+
+.lContainer>h1{
+    text-align: center;
 }
 
 .lInput{
     height: 30px;
     padding: 10px;
+}
+
+.lNew {
+    display: flex;
+    flex-direction: row;
+}
+
+.lNew>p{
+    padding-left: 8px;
 }
 
 .lButton {

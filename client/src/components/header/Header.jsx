@@ -61,41 +61,31 @@ const Header = ({type}) => {
 
                     <div className="headerListItem active">
                     <FontAwesomeIcon icon={faBed} />
-                    <span>Stays</span>
+                    <span>Lưu trú</span>
                     </div>
 
                     <div className="headerListItem">
                     <FontAwesomeIcon icon={faPlane} />
-                    <span>Flights</span>
+                    <span>Chuyến bay</span>
                     </div>
 
                     <div className="headerListItem">
                     <FontAwesomeIcon icon={faCar} />
-                    <span>Car Rentals</span>
-                    </div>
-
-                    <div className="headerListItem">
-                    <FontAwesomeIcon icon={faBed} />
-                    <span>Attractions</span>
-                    </div>
-
-                    <div className="headerListItem">
-                    <FontAwesomeIcon icon={faTaxi} />
-                    <span>Airport Taxis</span>
+                    <span>Thuê xe</span>
                     </div>
 
                 </div>
 
                 { type !== "list" &&
                 <>
-                    <h1 className="headerTitle">A lifetime of discounts? It's Genius.</h1>
+                    <h1 className="headerTitle">Tìm chỗ nghỉ với vô vàn ưu đãi!</h1>
                     
                     <p className="headerDesc">
-                        Get rewarded for your travels - unnlock instant savings of 10% or more with a free Lamabooking account
+                        Khách sạn, resort, villa và những điểm du lịch tuyệt vời cùng 10% sale ngay hôm nay.
                     </p>
 
-                    {!user && <button className="headerBtn" onClick={handleLogin}>
-                        Signin / Register
+                    {!user && <button className="headerBtn1" onClick={handleLogin}>
+                        Đăng nhập / Đăng ký ngay
                     </button>}
 
                     <div className="headerSearch">
@@ -103,7 +93,7 @@ const Header = ({type}) => {
                             <FontAwesomeIcon icon={faBed} className="headerIcon"/>
                             <input
                                 type="text"
-                                placeholder="Where are you going?"
+                                placeholder="Bạn muốn đi đâu?"
                                 className="headerSearchInput"
                                 onChange={e => setDestination(e.target.value)}/>
 
@@ -114,7 +104,7 @@ const Header = ({type}) => {
                             <span onClick={() => setOpenDate(!openDate)} className="headerSearchText">{`${format(
                                 dates[0].startDate, 
                                 "MM/dd/yyyy"
-                            )} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>
+                            )} đến ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>
                             {openDate && <DateRange
                                 editableDateInputs={true}
                                 onChange={item => setDates([item.selection])}
@@ -127,10 +117,10 @@ const Header = ({type}) => {
 
                         <div className="headerSeachItem">
                             <FontAwesomeIcon icon={faPerson} className="headerIcon"/>
-                            <span onClick={() => setOpenOptions(!openOptions)} className="headerSearchText">{`${options.adult} adult - ${options.children} children - ${options.room} room`}</span>
+                            <span onClick={() => setOpenOptions(!openOptions)} className="headerSearchText">{`${options.adult} người lớn - ${options.children} trẻ em - ${options.room} phòng`}</span>
                             {openOptions && <div className="options">
                                 <div className="optionItem">
-                                    <span className="optionText">Adult</span>
+                                    <span className="optionText">Người lớn</span>
                                     <div className="optionCounter">
                                         <button 
                                             disabled={options.adult <= 1}
@@ -142,7 +132,7 @@ const Header = ({type}) => {
                                 </div>
 
                                 <div className="optionItem">
-                                    <span className="optionText">Children</span>
+                                    <span className="optionText">Trẻ em</span>
                                     <div className="optionCounter">
                                         <button 
                                             disabled={options.children <= 0}
@@ -154,7 +144,7 @@ const Header = ({type}) => {
                                 </div>
 
                                 <div className="optionItem">
-                                    <span className="optionText">Room</span>
+                                    <span className="optionText">Phòng</span>
                                     <div className="optionCounter">
                                         <button 
                                             disabled={options.room <= 1}
@@ -168,7 +158,7 @@ const Header = ({type}) => {
                         </div>
 
                         <div className="headerSeachItem">
-                            <button className="headerBtn" onClick={handleSearch}>Search</button>
+                            <button className="headerBtn" onClick={handleSearch}>Tìm kiếm</button>
                         </div>
                     </div>
                 </>}

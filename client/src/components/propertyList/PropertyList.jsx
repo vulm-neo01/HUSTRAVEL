@@ -5,12 +5,11 @@ const PropertyList = () => {
     const {data, loading, error} = useFetch("/hotels/countByType");
 
     const images = [
-        "https://images.unsplash.com/photo-1495904786722-d2b5a19a8535?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=596&q=80",
-        "https://images.unsplash.com/photo-1521668576204-57ae3afee860?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        "https://images.unsplash.com/photo-1482192505345-5655af888cc4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
-        "https://images.unsplash.com/photo-1495904786722-d2b5a19a8535?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=596&q=80",
-        "https://images.unsplash.com/photo-1521668576204-57ae3afee860?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-
+        "http://du-lich.chudu24.com/f/m/2206/15/khach-san-nesta-da-nang.png",
+        "https://rhotelgeelong.com.au/wp-content/uploads/2021/03/R-Hotel-Geelong-1-Bedroom-8-scaled.jpg",
+        "https://file4.batdongsan.com.vn/2021/06/17/JGcIp0rf/20210617172417-2f9e.jpg",
+        "https://cdn.cet.edu.vn/wp-content/uploads/2019/02/villa-khong-gian-sang-trong.jpg",
+        "https://pictures.lodgix.com/media/gallery/property-75953/i018511_preview.jpg"
     ]
 
     return (

@@ -1,5 +1,5 @@
 .header{
-    background-color: #003580;
+    background-color: #e92d4f;
     color: white;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@
 }
 
 .headerListItem:hover{
-    background-color: #0071c2;
+    background-color: #fa98aa;
     cursor: pointer;
 }
 
@@ -51,13 +51,25 @@
 }
 
 .headerBtn{
-    background-color: #0071c2;
+    background-color: #e92d4f;
     color: white;
     font-weight: 500;
     padding: 10px;
     cursor: pointer;
     border: none;
+    font-weight: 700;
 }
+
+.headerBtn1{
+    background-color: white;
+    color: #e92d4f;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+}
+
 .headerBtn:hover{
     opacity: 0.8;
 }

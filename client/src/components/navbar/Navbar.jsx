@@ -16,6 +16,7 @@ const Navbar = () => {
 
     const handleSignin = (e) => {
         e.preventDefault();
+        navigate("/register")
     }
 
     const handleLogin = (e) => {
@@ -33,6 +34,7 @@ const Navbar = () => {
             {user ? (
             <div className="navItems">
                 <p>Xin chào {user.username}!</p>
+                <button className="navButton" onClick={handleLogout}>Đăng phòng của bạn!</button>
                 <button className="navButton" onClick={handleLogout}>Log out</button>
             </div>
             ) : (

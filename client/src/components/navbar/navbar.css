@@ -1,6 +1,6 @@
 .navbar{
     height: 50px;
-    background-color: #003580;
+    background-color: #e92d4f;
     display: flex;
     justify-content: center;
 
@@ -28,12 +28,12 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    color: #003580;
+    color: #fa375b;
     font-weight: 700;
 }
 
 .navButton:hover{
-    background-color: #69a8ff;
+    background-color: #fa375b;
     color: white;
 }
 
