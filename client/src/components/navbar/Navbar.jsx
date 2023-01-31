@@ -2,9 +2,27 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
+    
+    const handleLogout = (e) => {
+        e.preventDefault();
+        dispatch({ type: "LOGOUT" });
+        navigate("/");
+    };
+
+    const handleSignin = (e) => {
+        e.preventDefault();
+    }
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        navigate("/login");
+    }
+    const { user, loading, dispatch } = useContext(AuthContext);
 
     return (
         <div className="navbar">
@@ -12,10 +30,15 @@ const Navbar = () => {
             <Link to="/" style={{color:"inherit", textDecoration:"none"}}>
                 <span className="logo">HUSTRAVEL</span>
             </Link>
-            {user ? user.username : (
+            {user ? (
+            <div className="navItems">
+                <p>Xin chào {user.username}!</p>
+                <button className="navButton" onClick={handleLogout}>Log out</button>
+            </div>
+            ) : (
                 <div className="navItems">
-                    <button className="navButton">Register</button>
-                    <button className="navButton">Login</button>
+                    <button className="navButton" onClick={handleSignin}>Register</button>
+                    <button className="navButton" onClick={handleLogin}>Login</button>
                 </div>
             )}
             </div>

@@ -26,12 +26,18 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.headerListItem:hover{
+    background-color: #0071c2;
+    cursor: pointer;
 }
 
 .headerListItem.active{
     border: 1px solid white;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 5px;
 }
 
 .headerTitle{
@@ -51,6 +57,9 @@
     padding: 10px;
     cursor: pointer;
     border: none;
+}
+.headerBtn:hover{
+    opacity: 0.8;
 }
 
 .headerSearch{

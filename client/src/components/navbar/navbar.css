@@ -19,10 +19,29 @@
     font-weight: 500;
 }
 
+.logo:hover{
+    opacity: 0.8;
+}
+
 .navButton{
     margin-left: 20px;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     color: #003580;
+    font-weight: 700;
+}
+
+.navButton:hover{
+    background-color: #69a8ff;
+    color: white;
+}
+
+.navItems{
+    display: flex;
+    align-items: center;
+}
+
+.navItems>p{
+    font-size: 14px;
 }
