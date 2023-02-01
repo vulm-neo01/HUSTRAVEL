@@ -39,8 +39,8 @@ const Navbar = () => {
             </div>
             ) : (
                 <div className="navItems">
-                    <button className="navButton" onClick={handleSignin}>Register</button>
-                    <button className="navButton" onClick={handleLogin}>Login</button>
+                    <button className="navButton" onClick={handleSignin}>Đăng ký</button>
+                    <button className="navButton" onClick={handleLogin}>Đăng nhập</button>
                 </div>
             )}
             </div>

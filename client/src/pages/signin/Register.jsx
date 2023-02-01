@@ -20,8 +20,8 @@ const Register = () => {
     const handleClick = () => {
 
         const newUser = {
-
         }
+        navigate("/")
     }
 
     return (
